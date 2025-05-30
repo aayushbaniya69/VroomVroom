@@ -15,8 +15,8 @@ import java.sql.ResultSet;
 public class MySqlConnection implements DbConnection {
     public Connection openConnection() {
        String username="root";
-       String password="Your MySql password";
-       String database="marks";
+       String password="brbprssssrbss@8";
+       String database="VroomVroom";
        try{
            Class.forName("com.mysql.jdbc.Driver");
            Connection conn;
@@ -37,6 +37,11 @@ public class MySqlConnection implements DbConnection {
     }
 
     public int executeUpdate(Connection conn, String query) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public int executeQuery(Connection conn, String query) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

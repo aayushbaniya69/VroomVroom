@@ -4,10 +4,15 @@
  */
 package javaproject.database;
 
+import java.sql.*;
+
 /**
  *
  * @author ACER
  */
 public interface DbConnection {
-    
+    Connection openConnection();
+    void closeConnection(Connection conn);
+    ResultSet runQuery(Connection conn,String query);
+    int executeQuery(Connection conn,String query);
 }

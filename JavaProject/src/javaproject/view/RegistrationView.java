@@ -18,6 +18,7 @@ public class RegistrationView extends javax.swing.JFrame {
      */
     public RegistrationView() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(30, 30, 47));
     }
 
     /**
@@ -43,21 +44,22 @@ public class RegistrationView extends javax.swing.JFrame {
         Password = new javax.swing.JLabel();
         Password1 = new javax.swing.JLabel();
         Password2 = new javax.swing.JLabel();
-        PictureButton = new javax.swing.JButton();
         RegisterButton = new javax.swing.JButton();
         RePasswordField = new javax.swing.JPasswordField();
         PasswordField = new javax.swing.JPasswordField();
         ShowButton1 = new javax.swing.JButton();
         ShowButton2 = new javax.swing.JButton();
-        SecurityQuestion = new javax.swing.JComboBox<>();
-        SecurityAnswer = new javax.swing.JTextField();
+        SecurityQuestionField = new javax.swing.JComboBox<>();
+        SecurityAnswerField = new javax.swing.JTextField();
         BackToLogin = new javax.swing.JButton();
+        SecurityAnswer = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(30, 30, 47));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 204));
+        jPanel1.setBackground(new java.awt.Color(44, 47, 54));
 
         FirstName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         FirstName.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,11 +106,7 @@ public class RegistrationView extends javax.swing.JFrame {
 
         Password2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Password2.setForeground(new java.awt.Color(255, 255, 255));
-        Password2.setText("Security Key:");
-
-        PictureButton.setBackground(new java.awt.Color(0, 153, 51));
-        PictureButton.setForeground(new java.awt.Color(255, 255, 255));
-        PictureButton.setText("Upload Picutre");
+        Password2.setText("Security Question:");
 
         RegisterButton.setBackground(new java.awt.Color(255, 0, 0));
         RegisterButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,21 +126,35 @@ public class RegistrationView extends javax.swing.JFrame {
         ShowButton1.setBackground(new java.awt.Color(0, 0, 0));
         ShowButton1.setForeground(new java.awt.Color(255, 255, 255));
         ShowButton1.setText("Show");
+        ShowButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ShowButton1ActionPerformed(evt);
+            }
+        });
 
         ShowButton2.setBackground(new java.awt.Color(0, 0, 0));
         ShowButton2.setForeground(new java.awt.Color(255, 255, 255));
         ShowButton2.setText("Show");
+        ShowButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ShowButton2ActionPerformed(evt);
+            }
+        });
 
-        SecurityQuestion.setBackground(new java.awt.Color(102, 102, 102));
-        SecurityQuestion.setForeground(new java.awt.Color(255, 255, 255));
-        SecurityQuestion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "What is your nickname?", "What is your favorite color?", "What is your favorite food?", "What is your favorite pet?" }));
+        SecurityQuestionField.setBackground(new java.awt.Color(102, 102, 102));
+        SecurityQuestionField.setForeground(new java.awt.Color(255, 255, 255));
+        SecurityQuestionField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "What is your nickname?", "What is your favorite color?", "What is your favorite food?", "What is your favorite pet?" }));
 
-        SecurityAnswer.setBackground(new java.awt.Color(102, 102, 102));
-        SecurityAnswer.setForeground(new java.awt.Color(255, 255, 255));
+        SecurityAnswerField.setBackground(new java.awt.Color(102, 102, 102));
+        SecurityAnswerField.setForeground(new java.awt.Color(255, 255, 255));
 
         BackToLogin.setBackground(new java.awt.Color(0, 102, 102));
         BackToLogin.setForeground(new java.awt.Color(255, 255, 255));
         BackToLogin.setText("Back To Login");
+
+        SecurityAnswer.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SecurityAnswer.setForeground(new java.awt.Color(255, 255, 255));
+        SecurityAnswer.setText("Security Answer:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -165,7 +177,8 @@ public class RegistrationView extends javax.swing.JFrame {
                                     .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(PhoneNumber)
                                     .addComponent(Password1)
-                                    .addComponent(Password2))))
+                                    .addComponent(Password2)
+                                    .addComponent(SecurityAnswer))))
                         .addGap(43, 43, 43)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(AddressFiled)
@@ -174,15 +187,13 @@ public class RegistrationView extends javax.swing.JFrame {
                             .addComponent(PhoneNumberField)
                             .addComponent(RePasswordField)
                             .addComponent(PasswordField)
-                            .addComponent(SecurityQuestion, 0, 221, Short.MAX_VALUE)
-                            .addComponent(SecurityAnswer)))
+                            .addComponent(SecurityQuestionField, 0, 1, Short.MAX_VALUE)
+                            .addComponent(SecurityAnswerField)
+                            .addComponent(RegisterButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BackToLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(206, 206, 206)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EmailFiled)
-                            .addComponent(PictureButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
-                            .addComponent(RegisterButton, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
-                            .addComponent(BackToLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(EmailFiled)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ShowButton1)
@@ -215,53 +226,65 @@ public class RegistrationView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Password)
-                    .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ShowButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Password1)
                     .addComponent(RePasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ShowButton1))
+                    .addComponent(ShowButton2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Password2)
-                    .addComponent(ShowButton2)
-                    .addComponent(SecurityQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(SecurityQuestionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(SecurityAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SecurityAnswerField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SecurityAnswer))
                 .addGap(18, 18, 18)
-                .addComponent(PictureButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(RegisterButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BackToLogin)
-                .addContainerGap())
+                .addGap(29, 29, 29))
         );
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Registration Page");
+
+        jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(194, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(91, 91, 91))))
+                        .addGap(91, 91, 91))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(25, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(120, 120, 120))))
         );
 
         pack();
@@ -270,6 +293,26 @@ public class RegistrationView extends javax.swing.JFrame {
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_RegisterButtonActionPerformed
+
+    private void ShowButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowButton1ActionPerformed
+if (PasswordField.getEchoChar() != (char) 0) {
+    PasswordField.setEchoChar((char) 0); // Unmask password
+    ShowButton1.setText("Hide");
+} else {
+    PasswordField.setEchoChar('\u2022'); // Mask password again
+    ShowButton1.setText("Show");
+}        // TODO add your handling code here:
+    }//GEN-LAST:event_ShowButton1ActionPerformed
+
+    private void ShowButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowButton2ActionPerformed
+if (RePasswordField.getEchoChar() != (char) 0) {
+    RePasswordField.setEchoChar((char) 0); // Unmask password
+    ShowButton2.setText("Hide");
+} else {
+    RePasswordField.setEchoChar('\u2022'); // Mask password again
+    ShowButton2.setText("Show");
+}        // TODO add your handling code here:
+    }//GEN-LAST:event_ShowButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -322,14 +365,15 @@ public class RegistrationView extends javax.swing.JFrame {
     private javax.swing.JPasswordField PasswordField;
     private javax.swing.JLabel PhoneNumber;
     private javax.swing.JTextField PhoneNumberField;
-    private javax.swing.JButton PictureButton;
     private javax.swing.JPasswordField RePasswordField;
     private javax.swing.JButton RegisterButton;
-    private javax.swing.JTextField SecurityAnswer;
-    private javax.swing.JComboBox<String> SecurityQuestion;
+    private javax.swing.JLabel SecurityAnswer;
+    private javax.swing.JTextField SecurityAnswerField;
+    private javax.swing.JComboBox<String> SecurityQuestionField;
     private javax.swing.JButton ShowButton1;
     private javax.swing.JButton ShowButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
  public javax.swing.JTextField getFirstNameTextField(){
@@ -354,7 +398,7 @@ public class RegistrationView extends javax.swing.JFrame {
         return (JPasswordField) RePasswordField;
     }
     public javax.swing.JTextField getSecurityAnswerTextField(){
-        return SecurityAnswer;
+        return SecurityAnswerField;
     }
      public void RegistrationUser(ActionListener listener){
          RegisterButton.addActionListener(listener);

@@ -4,7 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="0" green="0" red="0" type="rgb"/>
+      <Color blue="2f" green="1e" red="1e" type="rgb"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -27,15 +27,18 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace pref="194" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="340" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel2" pref="180" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -46,9 +49,18 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="71" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jPanel1" min="-2" pref="363" max="-2" attributes="0"/>
+                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel2" min="-2" pref="179" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -57,7 +69,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="0" red="0" type="rgb"/>
+          <Color blue="36" green="2f" red="2c" type="rgb"/>
         </Property>
       </Properties>
 
@@ -84,6 +96,7 @@
                                       <Component id="PhoneNumber" min="-2" max="-2" attributes="0"/>
                                       <Component id="Password1" min="-2" max="-2" attributes="0"/>
                                       <Component id="Password2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="SecurityAnswer" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -95,18 +108,15 @@
                               <Component id="PhoneNumberField" alignment="0" max="32767" attributes="0"/>
                               <Component id="RePasswordField" alignment="0" max="32767" attributes="0"/>
                               <Component id="PasswordField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="SecurityQuestion" alignment="0" pref="221" max="32767" attributes="0"/>
-                              <Component id="SecurityAnswer" alignment="0" max="32767" attributes="0"/>
+                              <Component id="SecurityQuestionField" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="SecurityAnswerField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="RegisterButton" alignment="1" max="32767" attributes="0"/>
+                              <Component id="BackToLogin" alignment="0" pref="184" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="EmailFiled" max="32767" attributes="0"/>
-                              <Component id="PictureButton" alignment="1" pref="221" max="32767" attributes="0"/>
-                              <Component id="RegisterButton" alignment="0" pref="221" max="32767" attributes="0"/>
-                              <Component id="BackToLogin" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="EmailFiled" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -150,28 +160,29 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Password" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="PasswordField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ShowButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Password1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="RePasswordField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ShowButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ShowButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Password2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="ShowButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="SecurityQuestion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SecurityQuestionField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="SecurityAnswer" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="SecurityAnswerField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SecurityAnswer" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="PictureButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="RegisterButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="BackToLogin" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -312,18 +323,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Security Key:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="PictureButton">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="99" red="0" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Upload Picutre"/>
+            <Property name="text" type="java.lang.String" value="Security Question:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="RegisterButton">
@@ -370,6 +370,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Show"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ShowButton1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="ShowButton2">
           <Properties>
@@ -381,8 +384,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Show"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ShowButton2ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JComboBox" name="SecurityQuestion">
+        <Component class="javax.swing.JComboBox" name="SecurityQuestionField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
@@ -403,7 +409,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="SecurityAnswer">
+        <Component class="javax.swing.JTextField" name="SecurityAnswerField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
@@ -424,6 +430,17 @@
             <Property name="text" type="java.lang.String" value="Back To Login"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="SecurityAnswer">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Security Answer:"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -431,7 +448,15 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="36" style="1"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Registration Page"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
     </Component>
   </SubComponents>
